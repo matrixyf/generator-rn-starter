@@ -7,3 +7,4 @@ A scalffold for initialize RN widget with just a command
 - redux-toolkit
 - react-natigation
 - lingui
+- antd/rn [maybe]
