@@ -16,10 +16,10 @@ module.exports = class extends Generator {
 
     const prompts = [
       {
-        type: "confirm",
-        name: "someAnswer",
-        message: "Would you like to enable this option?",
-        default: true
+        type: "input",
+        name: "projectName",
+        message: "What the project name?",
+        default: "rn-template"
       }
     ];
 
@@ -30,13 +30,11 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath("dummyfile.txt"),
-      this.destinationPath("dummyfile.txt")
-    );
+    const projectName = this.props.projectName;
+    this.fs.copy(this.sourceRoot(), this.destinationPath(projectName));
   }
 
   install() {
-    this.installDependencies();
+    this.env.options.nodePackageManager = "yarn";
   }
 };

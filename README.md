@@ -6,5 +6,5 @@ A scalffold for initialize RN widget with just a command
 - react-redux
 - redux-toolkit
 - react-natigation
-- lingui
-- antd/rn [maybe]
+- react-intl
+- @ant-design/react-native
