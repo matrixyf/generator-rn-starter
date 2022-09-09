@@ -1,8 +1,8 @@
 {
   "name": "generator-rn-starter",
-  "version": "0.0.0",
-  "description": "",
-  "homepage": "",
+  "version": "1.0.0",
+  "description": "generator for initialize RN widget with just a command",
+  "homepage": "https://github.com/matrixyf/generator-rn-starter",
   "author": {
     "name": "matrixyf",
     "email": "paperflood1990@gmail.com",
