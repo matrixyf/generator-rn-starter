@@ -35,6 +35,9 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.env.options.nodePackageManager = "yarn";
+    const projectName = this.props.projectName;
+    process.chdir(process.cwd() + `/${projectName}`);
+    this.installDependencies();
+    this.spawnCommand("npx", ["pod-install", "ios"]);
   }
 };
